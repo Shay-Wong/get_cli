@@ -9,26 +9,30 @@ class BindingSample extends Sample {
   final String _controllerDir;
   final String _bindingName;
   final bool _isServer;
+  final bool isVersion5;
 
-  BindingSample(String path, this._fileName, this._bindingName,
-      this._controllerDir, this._isServer,
-      {bool overwrite = false})
-      : super(path, overwrite: overwrite);
+  BindingSample(
+    super.path,
+    this._fileName,
+    this._bindingName,
+    this._controllerDir,
+    this._isServer, {
+    super.overwrite,
+    this.isVersion5 = false,
+  });
 
-  String get _import => _isServer
-      ? "import 'package:get_server/get_server.dart';"
-      : "import 'package:get/get.dart';";
+  String get _import => _isServer ? "import 'package:get_server/get_server.dart';" : "import 'package:get/get.dart';";
 
   @override
   String get content => '''$_import
 import 'package:${PubspecUtils.projectName}/$_controllerDir';
 
-class $_bindingName extends Bindings {
+class $_bindingName extends Binding${isVersion5 ? '' : 's'} {
   @override
-  void dependencies() {
-    Get.lazyPut<${_fileName.pascalCase}Controller>(
+  ${isVersion5 ? 'List<Bind>' : 'void'} dependencies() {
+    ${isVersion5 ? "return [\nBind" : "Get"}.lazyPut<${_fileName.pascalCase}Controller>(
       () => ${_fileName.pascalCase}Controller(),
-    );
+    )${isVersion5 ? ",\n]" : ""};
   }
 }
 ''';

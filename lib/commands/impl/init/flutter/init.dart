@@ -14,15 +14,21 @@ class InitCommand extends Command {
 
   @override
   Future<void> execute() async {
+    final getxVersionMenu = Menu([
+      'GetX 4',
+      'GetX 5',
+    ], title: LocaleKeys.ask_use_getx_version.tr);
+    final getxVersionResult = getxVersionMenu.choose();
+
+    PubspecUtils.updateGetCliYaml('version', getxVersionResult.index == 0 ? 4 : 5);
+
     final menu = Menu([
       'GetX Pattern (by Kauê)',
       'CLEAN (by Arktekko)',
-    ], title: 'Which architecture do you want to use?');
+    ], title: LocaleKeys.ask_use_architecture.tr);
     final result = menu.choose();
 
-    result.index == 0
-        ? await createInitGetxPattern()
-        : await createInitKatekko();
+    result.index == 0 ? await createInitGetxPattern() : await createInitKatekko();
     if (!PubspecUtils.isServerProject) {
       await ShellUtils.pubGet();
     }

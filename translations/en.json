@@ -1,5 +1,6 @@
 {
   "ask": {
+    "type_to_project": "Select which type of project you want to create ?",
     "existing_page": "The page [%s] already exists, do you want to overwrite it?",
     "name_to_project": "what is the name of the project?",
     "company_domain": "What is your company's domain?",
@@ -10,7 +11,9 @@
     "android_lang": "what language do you want to use on android?",
     "use_null_safe": "Do you want to use null safe?",
     "use_linter": "do you want to use some linter?",
-    "new_page_name": "what new name for the page?"
+    "new_page_name": "what new name for the page?",
+    "use_architecture": "Which architecture do you want to use?",
+    "use_getx_version": "Which getx version do you want to use?"
   },
   "error": {
     "failed_to_connect": "Failed to connect with %s",
@@ -83,6 +86,7 @@
     "add_controller_in_bindings": "The %s has been added to binding at path: %s'",
     "navigation_added": "%s navigation added successfully.",
     "file_created": "File: %s created successfully at path: %s",
-    "route_created": "%s route created successfully."
+    "route_created": "%s route created successfully.",
+    "update_yaml": "Yaml get_cli %s update complete"
   }
 }

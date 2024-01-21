@@ -7,7 +7,7 @@ GetX™ 框架的官方 CLI。
 
 ```dart
 // 安装:
-pub global activate get_cli 
+pub global activate get_cli
 // 使用本命令需要设置系统环境变量: [FlutterSDK安装目录]\bin\cache\dart-sdk\bin 和 [FlutterSDK安装目录]\.pub-cache\bin
 
 flutter pub global activate get_cli
@@ -31,7 +31,7 @@ get create page:home
 // (Screens 有 controller, view, 和 binding)
 // 注: 你可以随便命名，例如: `get screen page:login`
 // 注: 选择了 CLEAN 结构才用这个选项 (by Arktekko)
-get create screen:home 
+get create screen:home
 
 // 在指定文件夹创建新 controller:
 // 注: 你无需引用文件夹, Getx 会自动搜索 home 目录,
@@ -300,7 +300,7 @@ abstract class Locales {
 
 创建json model 文件assets/models/user.json
 
-输入:  
+输入:
 
 ```json
 {

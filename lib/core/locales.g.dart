@@ -1,17 +1,16 @@
 // DO NOT EDIT. This is code generated via package:get_cli/get_cli.dart
 
 // ignore_for_file: lines_longer_than_80_chars
-// ignore_for_file: constant_identifier_names
 // ignore: avoid_classes_with_only_static_members
-
-
 class AppTranslation {
   static Map<String, Map<String, String>> translations = {
     'tr_TR': Locales.tr_TR,
     'zh_CN': Locales.zh_CN,
     'de': Locales.de,
+    'it_IT': Locales.it_IT,
     'en': Locales.en,
     'pt_BR': Locales.pt_BR,
+    'ar': Locales.ar,
   };
 }
 
@@ -26,17 +25,14 @@ class LocaleKeys {
   static const error_failed_to_connect = 'error_failed_to_connect';
   static const error_no_valid_file_or_url = 'error_no_valid_file_or_url';
   static const error_unnecessary_parameter = 'error_unnecessary_parameter';
-  static const error_unnecessary_parameter_plural =
-      'error_unnecessary_parameter_plural';
+  static const error_unnecessary_parameter_plural = 'error_unnecessary_parameter_plural';
   static const error_nonexistent_directory = 'error_nonexistent_directory';
   static const error_empty_directory = 'error_empty_directory';
   static const error_invalid_json = 'error_invalid_json';
-  static const error_special_characters_in_key =
-      'error_special_characters_in_key';
+  static const error_special_characters_in_key = 'error_special_characters_in_key';
   static const error_required_path = 'error_required_path';
   static const error_invalid_dart = 'error_invalid_dart';
-  static const error_invalid_file_or_directory =
-      'error_invalid_file_or_directory';
+  static const error_invalid_file_or_directory = 'error_invalid_file_or_directory';
   static const error_package_not_found = 'error_package_not_found';
   static const error_cli_version_not_found = 'error_cli_version_not_found';
   static const error_update_cli = 'error_update_cli';
@@ -63,8 +59,7 @@ class LocaleKeys {
   static const info_unnecessary_flag = 'info_unnecessary_flag';
   static const info_unnecessary_flag_prural = 'info_unnecessary_flag_prural';
   static const info_package_not_installed = 'info_package_not_installed';
-  static const info_cli_last_version_already_installed =
-      'info_cli_last_version_already_installed';
+  static const info_cli_last_version_already_installed = 'info_cli_last_version_already_installed';
   static const info_no_file_overwritten = 'info_no_file_overwritten';
   static const info_update_available = 'info_update_available';
   static const info_update_available2 = 'info_update_available2';
@@ -74,25 +69,27 @@ class LocaleKeys {
   static const sucess_page_create = 'sucess_page_create';
   static const sucess_locale_generate = 'sucess_locale_generate';
   static const sucess_getx_pattern_generated = 'sucess_getx_pattern_generated';
-  static const sucess_clean_Pattern_generated =
-      'sucess_clean_Pattern_generated';
+  static const sucess_clean_Pattern_generated = 'sucess_clean_Pattern_generated';
   static const sucess_file_formatted = 'sucess_file_formatted';
   static const sucess_package_removed = 'sucess_package_removed';
   static const sucess_package_installed = 'sucess_package_installed';
   static const sucess_update_cli = 'sucess_update_cli';
-  static const sucess_add_controller_in_bindings =
-      'sucess_add_controller_in_bindings';
+  static const sucess_add_controller_in_bindings = 'sucess_add_controller_in_bindings';
   static const sucess_navigation_added = 'sucess_navigation_added';
   static const sucess_file_created = 'sucess_file_created';
   static const sucess_route_created = 'sucess_route_created';
+  static const ask_type_to_project = 'ask_type_to_project';
   static const ask_ios_lang = 'ask_ios_lang';
   static const ask_android_lang = 'ask_android_lang';
   static const ask_use_null_safe = 'ask_use_null_safe';
   static const ask_use_linter = 'ask_use_linter';
   static const ask_new_page_name = 'ask_new_page_name';
+  static const ask_use_architecture = 'ask_use_architecture';
+  static const ask_use_getx_version = 'ask_use_getx_version';
   static const error_no_package_to_remove = 'error_no_package_to_remove';
   static const warning = 'warning';
   static const options_rename = 'options_rename';
+  static const sucess_update_yaml = 'sucess_update_yaml';
 }
 
 class Locales {
@@ -100,10 +97,8 @@ class Locales {
     'ask_existing_page': '[%s] sayfası zaten mevcut, üzerine mi yazılsın?',
     'ask_name_to_project': 'Projenin adı nedir?',
     'ask_company_domain': 'Şirketinizin domain adresi nedir?',
-    'ask_model_name':
-        'Model adı otomatik olarak ayarlanamadı, hangi ad kullanılsın?',
-    'ask_package_already_installed':
-        'Paket: %s zaten yüklü, güncellemek ister misin?',
+    'ask_model_name': 'Model adı otomatik olarak ayarlanamadı, hangi ad kullanılsın?',
+    'ask_package_already_installed': 'Paket: %s zaten yüklü, güncellemek ister misin?',
     'ask_lib_not_empty':
         'lib klasörünüz boş değil. Bu uygulamanın üzerine yazmak istediğinden emin misin? \n UYARI: Bu işlem geri alınamaz',
     'error_failed_to_connect': '%s ile bağlantı başarısız oldu',
@@ -113,8 +108,7 @@ class Locales {
     'error_nonexistent_directory': '%s dizini mevcut değil.',
     'error_empty_directory': '%s dizini boş',
     'error_invalid_json': '%s, geçerli bir json dosyası değil',
-    'error_special_characters_in_key':
-        'Anahtar içerisinde özel karakterlere izin verilmez. \n karakter: %s',
+    'error_special_characters_in_key': 'Anahtar içerisinde özel karakterlere izin verilmez. \n karakter: %s',
     'error_required_path': 'Dosya veya dizin yolunu geçmek için gerekli',
     'error_invalid_dart': '%s geçerli bir dart dosyası değil',
     'error_invalid_file_or_directory': '%s geçerli bir dosya veya dizin değil',
@@ -144,8 +138,7 @@ class Locales {
     'info_unnecessary_flag': '%s gerekli değil',
     'info_unnecessary_flag_prural': '%s gerekli değil',
     'info_package_not_installed': 'Paket: %s bu uygulama için yüklenemedi',
-    'info_cli_last_version_already_installed':
-        'get_cli\'nin son sürümü zaten yüklü',
+    'info_cli_last_version_already_installed': 'get_cli\'nin son sürümü zaten yüklü',
     'info_no_file_overwritten': 'Hiçbir dosyanın üzerine yazılmadı',
     'info_update_available': 'Bir güncelleme mevcut! Mevcut yüklü sürüm: %s',
     'info_update_available2': 'Yeni sürüm mevcut: %s çalıştırın:',
@@ -154,22 +147,19 @@ class Locales {
     'optional_parameters': 'Opsiyonel parametreler: %s',
     'sucess_page_create': '%s sayfası başarıyla oluşturuldu.',
     'sucess_locale_generate': 'yerel dosyalar başarıyla oluşturuldu.',
-    'sucess_getx_pattern_generated':
-        'GetX Pattern yapısı başarıyla oluşturuldu.',
-    'sucess_clean_Pattern_generated':
-        'CLEAN Pattern yapısı başarıyla oluşturuldu.',
+    'sucess_getx_pattern_generated': 'GetX Pattern yapısı başarıyla oluşturuldu.',
+    'sucess_clean_Pattern_generated': 'CLEAN Pattern yapısı başarıyla oluşturuldu.',
     'sucess_file_formatted': ' \'%s\' başarıyla biçimlendirildi.',
     'sucess_package_removed': 'Paket: %s kaldırıldı!',
     'sucess_package_installed': '\'Paket: %s yüklendi!',
     'sucess_update_cli': 'Yükseltme tamamlandı.',
-    'sucess_add_controller_in_bindings':
-        '%s bağlayıcıya eklendi. Eklendiği dizin: %s\'',
+    'sucess_add_controller_in_bindings': '%s bağlayıcıya eklendi. Eklendiği dizin: %s\'',
     'sucess_navigation_added': '%s navigasyonu başarıyla eklendi.',
-    'sucess_file_created':
-        'Dosya: %s başarıyla oluşturuldu. Oluşturulduğu dizin: %s',
+    'sucess_file_created': 'Dosya: %s başarıyla oluşturuldu. Oluşturulduğu dizin: %s',
     'sucess_route_created': '%s rotası başarıyla oluşturuldu.',
   };
   static const zh_CN = {
+    'ask_type_to_project': '选择您要创建的项目类型？',
     'ask_existing_page': '页面 [%s] 已存在，你想覆盖吗？',
     'ask_name_to_project': '项目名称是？',
     'ask_company_domain': '你公司的域名是？',
@@ -181,6 +171,8 @@ class Locales {
     'ask_use_null_safe': '要使用 null safe 吗？',
     'ask_use_linter': '你想用代码检查器吗？',
     'ask_new_page_name': 'page 的名字是？',
+    'ask_use_architecture': '您想使用哪种架构？',
+    'ask_use_getx_version': '您要使用哪个 get 版本？',
     'error_failed_to_connect': '连接到 %s 失败',
     'error_no_valid_file_or_url': '%s 不是有效的文件或URL',
     'error_unnecessary_parameter': '参数 %s 是多余的',
@@ -240,16 +232,14 @@ class Locales {
     'sucess_navigation_added': '%s navigation添加成功.',
     'sucess_file_created': '文件: %s 创建成功，路径: %s',
     'sucess_route_created': '%s route 创建成功.',
+    'sucess_update_yaml': 'Yaml get_cli %s 更新完成',
   };
   static const de = {
-    'ask_existing_page':
-        'Die Seite [%s] existiert bereits, möchten Sie die Seite überschreiben?',
+    'ask_existing_page': 'Die Seite [%s] existiert bereits, möchten Sie die Seite überschreiben?',
     'ask_name_to_project': 'Wie lautet der Name des Projekts?',
     'ask_company_domain': 'Wie lautet die Domäne Ihres Unternehmens?',
-    'ask_model_name':
-        'Der Modellname konnte nicht automatisch gesetzt werden, welchen Namen möchten Sie verwenden?',
-    'ask_package_already_installed':
-        'Paket: %s bereits installiert, möchten Sie es aktualisieren?',
+    'ask_model_name': 'Der Modellname konnte nicht automatisch gesetzt werden, welchen Namen möchten Sie verwenden?',
+    'ask_package_already_installed': 'Paket: %s bereits installiert, möchten Sie es aktualisieren?',
     'ask_lib_not_empty':
         'Der lib-Ordner ist nicht leer. Sind Sie sicher, dass Sie Ihre Anwendung überschreiben möchten? \n WARNUNG: Diese Aktion ist nicht umkehrbar',
     'ask_ios_lang': 'Welche Sprache möchten Sie auf iOS verwenden?',
@@ -260,29 +250,22 @@ class Locales {
     'error_failed_to_connect': 'Verbindung mit %s fehlgeschlagen',
     'error_no_valid_file_or_url': '%s ist keine Datei oder gültige Url',
     'error_unnecessary_parameter': 'der Parameter %s ist nicht notwendig',
-    'error_unnecessary_parameter_plural':
-        'die Parameter %s ist nicht notwendig',
+    'error_unnecessary_parameter_plural': 'die Parameter %s ist nicht notwendig',
     'error_nonexistent_directory': 'Das Verzeichnis %s existiert nicht.',
     'error_empty_directory': 'Das Verzeichnis %s ist leer',
     'error_invalid_json': '%s ist keine gültige JSON-Datei',
-    'error_special_characters_in_key':
-        'Sonderzeichen sind in der Key nicht erlaubt. \n Key: %s',
-    'error_required_path':
-        'Wird benötigt, um den Datei- oder Verzeichnispfad zu übergeben',
+    'error_special_characters_in_key': 'Sonderzeichen sind in der Key nicht erlaubt. \n Key: %s',
+    'error_required_path': 'Wird benötigt, um den Datei- oder Verzeichnispfad zu übergeben',
     'error_invalid_dart': 'Die %s ist keine gültige Dart-Datei',
-    'error_invalid_file_or_directory':
-        'Die %s ist keine gültige Datei oder Verzeichnis',
+    'error_invalid_file_or_directory': 'Die %s ist keine gültige Datei oder Verzeichnis',
     'error_package_not_found': 'Paket: %s wurde nicht in pub.dev gefunden',
-    'error_cli_version_not_found':
-        'die von Ihnen installierte Version wurde nicht gefunden.',
-    'error_update_cli':
-        'Es gab einen Fehler bei der Aktualisierung von get_cli',
+    'error_cli_version_not_found': 'die von Ihnen installierte Version wurde nicht gefunden.',
+    'error_update_cli': 'Es gab einen Fehler bei der Aktualisierung von get_cli',
     'error_folder_not_found': 'Ordner %s nicht gefunden',
     'error_file_not_found': 'Datei nicht gefunden in %s',
     'error_access_denied': 'Zugriff auf %s verweigert',
     'error_unexpected': 'Unerwarteter Fehler ist aufgetreten:',
-    'error_no_package_to_remove':
-        'Geben Sie den Namen des Pakets ein, das Sie entfernen möchten',
+    'error_no_package_to_remove': 'Geben Sie den Namen des Pakets ein, das Sie entfernen möchten',
     'example': 'Beispiel:',
     'warning': 'Warnung:',
     'hint_create_controller': 'Controller generieren',
@@ -294,24 +277,18 @@ class Locales {
     'hint_generate_locales': 'Übersetzungsdatei aus JSON-Dateien generieren',
     'hint_generate_model': 'Klassenmodell aus JSON generieren',
     'hint_help': 'Diese Hilfe anzeigen',
-    'hint_init':
-        'die gewählte Struktur an einem bestehenden Projekt zu erzeugen:',
-    'hint_install':
-        'Dient zur Installation eines Pakets in Ihrem Projekt (dependencies):',
-    'hint_remove':
-        'Verwenden Sie diese Option, um ein Paket in Ihrem Projekt zu entfernen (dependencies):',
+    'hint_init': 'die gewählte Struktur an einem bestehenden Projekt zu erzeugen:',
+    'hint_install': 'Dient zur Installation eines Pakets in Ihrem Projekt (dependencies):',
+    'hint_remove': 'Verwenden Sie diese Option, um ein Paket in Ihrem Projekt zu entfernen (dependencies):',
     'hint_sort': 'Importierte Dart-Dateien sortieren und formatieren',
     'hint_update': 'So aktualisieren Sie GET_CLI',
     'hint_version': 'Zeigt die aktuelle CLI-Version an\'',
     'info_unnecessary_flag': 'Das %s ist nicht notwendig',
     'info_unnecessary_flag_prural': 'Die %s ist nicht notwendig',
-    'info_package_not_installed':
-        'Paket: %s ist in dieser Anwendung nicht installiert',
-    'info_cli_last_version_already_installed':
-        'Neueste Version von get_cli bereits installiert',
+    'info_package_not_installed': 'Paket: %s ist in dieser Anwendung nicht installiert',
+    'info_cli_last_version_already_installed': 'Neueste Version von get_cli bereits installiert',
     'info_no_file_overwritten': 'Es wurden keine Dateien überschrieben',
-    'info_update_available':
-        'Es ist ein Update verfügbar! Aktuell installierte Version: %s',
+    'info_update_available': 'Es ist ein Update verfügbar! Aktuell installierte Version: %s',
     'info_update_available2': 'Neue Version verfügbar: %s Bitte, ausführen:',
     'options_yes': 'Ja!',
     'options_no': 'Nein',
@@ -319,29 +296,97 @@ class Locales {
     'optional_parameters': 'Optionale Parameter: %s',
     'sucess_page_create': '%s-Page erfolgreich erstellt.',
     'sucess_locale_generate': 'Sprachumgebungsdateien erfolgreich generiert.',
-    'sucess_getx_pattern_generated':
-        'GetX Pattern-Struktur erfolgreich erzeugt.',
-    'sucess_clean_Pattern_generated':
-        'CLEAN Pattern-Struktur erfolgreich erzeugt.',
+    'sucess_getx_pattern_generated': 'GetX Pattern-Struktur erfolgreich erzeugt.',
+    'sucess_clean_Pattern_generated': 'CLEAN Pattern-Struktur erfolgreich erzeugt.',
     'sucess_file_formatted': ' \'%s\' wurde erfolgreich formatiert',
     'sucess_package_removed': 'Paket: %s entfernt!',
     'sucess_package_installed': '\'Paket: %s installiert!',
     'sucess_update_cli': 'Upgrade abgeschlossen',
-    'sucess_add_controller_in_bindings':
-        'Das %s wurde dem Binding unter Pfad: %s\' hinzugefügt.',
+    'sucess_add_controller_in_bindings': 'Das %s wurde dem Binding unter Pfad: %s\' hinzugefügt.',
     'sucess_navigation_added': '%s Navigation erfolgreich hinzugefügt.',
     'sucess_file_created': 'Datei: %s erfolgreich erstellt unter Pfad: %s',
     'sucess_route_created': '%s-Route erfolgreich erstellt.',
   };
+  static const it_IT = {
+    'ask_existing_page': 'La pagina [%s] è già presente, vuoi sovrascriverla?',
+    'ask_name_to_project': 'Qual\'è il nome del tuo progetto?',
+    'ask_company_domain': 'Qual\'è il dominio della tua compagnia?',
+    'ask_model_name': 'Impossibile impostare automaticamente il nome del modello, quale vuoi usare?',
+    'ask_package_already_installed': 'Pacchetto: %s è già presente, desideri aggiornarlo?',
+    'ask_lib_not_empty':
+        'La cartella \'lib\' contiene dei file. Sei sicuro di voler sovrascrivere la tua applicazione? \n ATTENZIONE: Azione irreversibile',
+    'ask_ios_lang': 'Quale linguaggio vuoi utilizzare su piattaforma iOS?',
+    'ask_android_lang': 'Quale linguaggio vuoi utilizzare su piattaforma Android?',
+    'ask_use_null_safe': 'Vuoi usare la metodologia \'null-safe\'?',
+    'ask_use_linter': 'Vuoi utilizzare qualche \'linter\'?',
+    'ask_new_page_name': 'Quale sarà il nome della nuova pagina?',
+    'error_failed_to_connect': 'Tentativo di connessione con %s fallito.',
+    'error_no_valid_file_or_url': '%s non è un file o un URL valida.',
+    'error_unnecessary_parameter': 'il parametro %s non è necessario',
+    'error_unnecessary_parameter_plural': 'i parametri %s non sono necessari',
+    'error_nonexistent_directory': 'La cartella %s non è stata trovata.',
+    'error_empty_directory': 'la cartella %s è vuota',
+    'error_invalid_json': '%s non è un file \'json\' valido',
+    'error_special_characters_in_key': 'La chiave non ammette caratteri speciali. \n chiave: %s',
+    'error_required_path': 'È necessario includere il percorso del file o della cartella.',
+    'error_invalid_dart': '%s non è un file \'dart\' valido',
+    'error_invalid_file_or_directory': '%s non è un file o una cartella valida.',
+    'error_package_not_found': 'Package: %s non è stato trovato sul \'pub.dev\'',
+    'error_cli_version_not_found': 'Impossibile trovare la versione installata.',
+    'error_update_cli': 'Si è verificato un errore durante l\'aggiornamento di get_cli',
+    'error_folder_not_found': 'La cartella %s non è stata trovata',
+    'error_file_not_found': 'Il file al percorso %s non è stato trovato',
+    'error_access_denied': 'Accesso negato a %s',
+    'error_unexpected': 'Si è verificato un errore inaspettato:',
+    'error_no_package_to_remove': 'Immetti il nome del pacchetto da rimuovere',
+    'example': 'Esempio:',
+    'warning': 'Avvertimento:',
+    'hint_create_controller': 'Genera un controller',
+    'hint_create_page': 'Genera una pagina',
+    'hint_create_project': 'Genera un nuovo progetto',
+    'hint_create_provider': 'Genera un nuovo provider',
+    'hint_create_screen': 'Genera una nuova schermata',
+    'hint_create_view': 'Genera una nuova visuale',
+    'hint_generate_locales': 'Genera le traduzioni da un file json',
+    'hint_generate_model': 'Genera una classe modello da un file json',
+    'hint_help': 'Mostra la lista comandi',
+    'hint_init': 'Genera la struttura selezionata in un progetto esistente:',
+    'hint_install': 'Installa pacchetti dal pub.dev sul progetto (dependencies):',
+    'hint_remove': 'Rimuovi un pacchetto intallato dal tuo progetto (dependencies):',
+    'hint_sort': 'Ordina importazioni e formatta i file dart',
+    'hint_update': 'Aggiorna GET_CLI',
+    'hint_version': 'Mostra la versione attuale della CLI',
+    'info_unnecessary_flag': '%s non è un argomento necessario',
+    'info_unnecessary_flag_prural': '%s non sono argomenti necessari',
+    'info_package_not_installed': 'Pacchetto: %s non sembra essere installato',
+    'info_cli_last_version_already_installed': 'Hai già la versione più recente di get_cli',
+    'info_no_file_overwritten': 'Nessun file è stato sovrascritto',
+    'info_update_available': 'C\'è un aggiornamento disponibile! Versione attualmente installata: %s',
+    'info_update_available2': 'Nuova versione disponibile: %s Perfavore, esegui:',
+    'options_yes': 'Si!',
+    'options_no': 'No',
+    'options_rename': 'Rinomina',
+    'optional_parameters': 'Parametri opzionali: %s',
+    'sucess_page_create': 'La pagina %s è stata creata con successo.',
+    'sucess_locale_generate': 'File di localizzazione generato con successo.',
+    'sucess_getx_pattern_generated': 'Struttura con impronta GetX generata con successo.',
+    'sucess_clean_Pattern_generated': 'Struttura con impronta CLEAN generata con successo.',
+    'sucess_file_formatted': ' \'%s\' è stato formattato con successo',
+    'sucess_package_removed': 'Pacchetto: %s è stato rimosso!',
+    'sucess_package_installed': '\'Pacchetto: %s è stato installato con successo!',
+    'sucess_update_cli': 'Aggiornamento completato',
+    'sucess_add_controller_in_bindings': 'Il controller %s è stato aggiunto con successo a bindings al percorso: %s\'',
+    'sucess_navigation_added': 'La navigazione %s è stata aggiunta con successo.',
+    'sucess_file_created': 'File: %s è stato creato con successo al percorso: %s',
+    'sucess_route_created': 'La route %s è stata aggiunta con successo.',
+  };
   static const en = {
-    'ask_existing_page':
-        'The page [%s] already exists, do you want to overwrite it?',
+    'ask_type_to_project': 'Select which type of project you want to create ?',
+    'ask_existing_page': 'The page [%s] already exists, do you want to overwrite it?',
     'ask_name_to_project': 'what is the name of the project?',
     'ask_company_domain': 'What is your company\'s domain?',
-    'ask_model_name':
-        'Could not set the model name automatically, which name do you want to use?',
-    'ask_package_already_installed':
-        'package: %s already installed, do you want to update?',
+    'ask_model_name': 'Could not set the model name automatically, which name do you want to use?',
+    'ask_package_already_installed': 'package: %s already installed, do you want to update?',
     'ask_lib_not_empty':
         'Your lib folder is not empty. Are you sure you want to overwrite your application? \n WARNING: This action is irreversible',
     'ask_ios_lang': 'what language do you want to use on ios?',
@@ -349,6 +394,8 @@ class Locales {
     'ask_use_null_safe': 'Do you want to use null safe?',
     'ask_use_linter': 'do you want to use some linter?',
     'ask_new_page_name': 'what new name for the page?',
+    'ask_use_architecture': 'Which architecture do you want to use?',
+    'ask_use_getx_version': 'Which getx version do you want to use?',
     'error_failed_to_connect': 'Failed to connect with %s',
     'error_no_valid_file_or_url': '%s is not a file or valid url',
     'error_unnecessary_parameter': 'the %s parameter is not necessary',
@@ -356,22 +403,18 @@ class Locales {
     'error_nonexistent_directory': '%s directory does not exist.',
     'error_empty_directory': '%s is empty',
     'error_invalid_json': '%s is not a valid json file',
-    'error_special_characters_in_key':
-        'Special characters are not allowed in key. \n key: %s',
+    'error_special_characters_in_key': 'Special characters are not allowed in key. \n key: %s',
     'error_required_path': 'Needed to pass the file or directory path',
     'error_invalid_dart': 'The %s is not a valid dart file',
-    'error_invalid_file_or_directory':
-        'The %s is not a valid file or directory',
+    'error_invalid_file_or_directory': 'The %s is not a valid file or directory',
     'error_package_not_found': 'Package: %s not found in pub.dev',
-    'error_cli_version_not_found':
-        'failed to find the version you have installed.',
+    'error_cli_version_not_found': 'failed to find the version you have installed.',
     'error_update_cli': 'There was an error upgrading get_cli',
     'error_folder_not_found': 'Folder %s not found',
     'error_file_not_found': 'File not found in %s',
     'error_access_denied': 'Access denied to %s',
     'error_unexpected': 'Unexpected error occurred:',
-    'error_no_package_to_remove':
-        'Enter the name of the package you wanna remove',
+    'error_no_package_to_remove': 'Enter the name of the package you wanna remove',
     'example': 'Example:',
     'warning': 'Warning:',
     'hint_create_controller': 'Generate controller',
@@ -391,13 +434,10 @@ class Locales {
     'hint_version': 'Shows the current CLI version\'',
     'info_unnecessary_flag': 'The %s is not necessary',
     'info_unnecessary_flag_prural': 'The %s are not necessary',
-    'info_package_not_installed':
-        'Package: %s is not installed in this application',
-    'info_cli_last_version_already_installed':
-        'Latest version of get_cli already installed',
+    'info_package_not_installed': 'Package: %s is not installed in this application',
+    'info_cli_last_version_already_installed': 'Latest version of get_cli already installed',
     'info_no_file_overwritten': 'No files were overwritten',
-    'info_update_available':
-        'There\'s an update available! Current installed version: %s',
+    'info_update_available': 'There\'s an update available! Current installed version: %s',
     'info_update_available2': 'New version available: %s Please, run:',
     'options_yes': 'Yes!',
     'options_no': 'No',
@@ -405,48 +445,39 @@ class Locales {
     'optional_parameters': 'Optional parameters: %s',
     'sucess_page_create': '%s page created successfully.',
     'sucess_locale_generate': 'locale files generated successfully.',
-    'sucess_getx_pattern_generated':
-        'GetX Pattern structure successfully generated.',
-    'sucess_clean_Pattern_generated':
-        'CLEAN Pattern structure successfully generated.',
+    'sucess_getx_pattern_generated': 'GetX Pattern structure successfully generated.',
+    'sucess_clean_Pattern_generated': 'CLEAN Pattern structure successfully generated.',
     'sucess_file_formatted': ' \'%s\' was successfully formatted',
     'sucess_package_removed': 'Package: %s removed!',
     'sucess_package_installed': '\'Package: %s installed!',
     'sucess_update_cli': 'Upgrade complete',
-    'sucess_add_controller_in_bindings':
-        'The %s has been added to binding at path: %s\'',
+    'sucess_add_controller_in_bindings': 'The %s has been added to binding at path: %s\'',
     'sucess_navigation_added': '%s navigation added successfully.',
     'sucess_file_created': 'File: %s created successfully at path: %s',
     'sucess_route_created': '%s route created successfully.',
+    'sucess_update_yaml': 'Yaml get_cli %s update complete',
   };
   static const pt_BR = {
     'ask_existing_page': 'A página [%s] já existe, deseja sobrescrevê-la?',
     'ask_name_to_project': 'Qual é o nome do projeto?',
     'ask_company_domain': 'Qual é o domínio da sua empresa?',
-    'ask_model_name':
-        'Não foi possível definir o nome do modelo automaticamente, qual nome você deseja usar?',
-    'ask_package_already_installed':
-        'pacote: %s já instalado, deseja atualizar?',
+    'ask_model_name': 'Não foi possível definir o nome do modelo automaticamente, qual nome você deseja usar?',
+    'ask_package_already_installed': 'pacote: %s já instalado, deseja atualizar?',
     'ask_lib_not_empty':
         'Sua pasta lib não está vazia. Tem certeza de que deseja sobrescrever seu aplicativo? \n AVISO: essa ação é irreversível',
     'error_failed_to_connect': 'Falha ao conectar com %s',
     'error_no_valid_file_or_url': '\'%s\' não é um arquivo ou url válido',
     'error_unnecessary_parameter': 'O parâmetro %s não é necessário',
-    'error_unnecessary_parameter_plural':
-        'Os parâmetros %s não são necessários',
+    'error_unnecessary_parameter_plural': 'Os parâmetros %s não são necessários',
     'error_nonexistent_directory': 'O diretório %s não existe.',
     'error_empty_directory': 'o diretório %s está vazio',
     'error_invalid_json': '%s não é um arquivo json válido',
-    'error_special_characters_in_key':
-        'Caracteres especiais não são permitidos na key. \n key: %s',
-    'error_required_path':
-        'Necessário para passar o path do arquivo ou diretório',
+    'error_special_characters_in_key': 'Caracteres especiais não são permitidos na key. \n key: %s',
+    'error_required_path': 'Necessário para passar o path do arquivo ou diretório',
     'error_invalid_dart': 'O %s não é um arquivo dart válido',
-    'error_invalid_file_or_directory':
-        'O %s não é um arquivo ou diretório válido',
+    'error_invalid_file_or_directory': 'O %s não é um arquivo ou diretório válido',
     'error_package_not_found': 'Pacote: %s não encontrado em pub.dev',
-    'error_cli_version_not_found':
-        'Não foi possível encontrar a versão instalada da CLI',
+    'error_cli_version_not_found': 'Não foi possível encontrar a versão instalada da CLI',
     'error_update_cli': 'Ocorreu um erro ao atualizar get_cli',
     'error_folder_not_found': 'Pasta %s não encontrada',
     'error_file_not_found': 'Arquivo não encontrado em %s',
@@ -455,33 +486,27 @@ class Locales {
     'example': 'Exemplo:',
     'hint_create_controller': 'Gerar um novo controller',
     'hint_create_page':
-        'Gerar um novo modulo, (controller, view e bindigns) (Use essa opcão se está usando getx_pattern)',
-    'hint_create_project':
-        'Crie um novo projeto, escolha flutter ou get server',
+        'Gerar um novo modulo, (controller, view e bindigns) (Use essa opção se está usando getx_pattern)',
+    'hint_create_project': 'Crie um novo projeto, escolha flutter ou get server',
     'hint_create_provider': 'Cria uma classe Provider',
     'hint_create_screen':
-        'Gera uma nova Screen, [controller, view e bindigns] (Use essa opcão se for está usando clean)',
+        'Gera uma nova Screen, [controller, view e bindigns] (Use essa opção se for está usando clean)',
     'hint_create_view': 'Cria uma nova view',
-    'hint_generate_locales':
-        'Gera um arquivo de traduçao comativel com getx usando json files',
+    'hint_generate_locales': 'Gerar um arquivo de tradução compatível com getx usando json',
     'hint_generate_model': 'Crie sua classe model apartir de um json',
     'hint_help': 'mostra a tela de help',
     'hint_init': 'Gere a estrutura escolhida em um projeto existente:',
-    'hint_install':
-        'Use para instalar um pacote em seu projeto (dependencies):',
+    'hint_install': 'Use para instalar um pacote em seu projeto (dependencies):',
     'hint_remove': 'Use para remover um pacote em seu projeto (dependencies):',
     'hint_sort': 'Classificar os imports e formatar arquivos dart',
     'hint_update': 'Para atualizar GET_CLI',
     'hint_version': 'Mostra a versão atual do get_cli',
     'info_unnecessary_flag': 'A flag: %s não é necessária',
     'info_unnecessary_flag_prural': 'As flags: %s não são necessárias',
-    'info_package_not_installed':
-        'Pacote: %s não está instalado neste aplicativo',
-    'info_cli_last_version_already_installed':
-        'Versão mais recente de get_cli já instalada',
+    'info_package_not_installed': 'Pacote: %s não está instalado neste aplicativo',
+    'info_cli_last_version_already_installed': 'Versão mais recente de get_cli já instalada',
     'info_no_file_overwritten': 'Nenhum arquivo foi sobrescrito',
-    'info_update_available':
-        'Há uma atualização disponível! Versão atual instalada: %s',
+    'info_update_available': 'Há uma atualização disponível! Versão atual instalada: %s',
     'info_update_available2': 'Nova versão disponível: %s Por favor, execute:',
     'options_yes': 'Sim!',
     'options_no': 'Não!',
@@ -489,17 +514,87 @@ class Locales {
     'optional_parameters': 'Parâmetros opcionais: %s',
     'sucess_page_create': 'Página %s criada com sucesso.',
     'sucess_locale_generate': 'Arquivo de tradução gerado com sucesso.',
-    'sucess_getx_pattern_generated':
-        'Estrutura GetX Pattern gerada com sucesso.',
+    'sucess_getx_pattern_generated': 'Estrutura GetX Pattern gerada com sucesso.',
     'sucess_clean_Pattern_generated': 'Estrutura CLEAN gerada com sucesso.',
     'sucess_file_formatted': ' \'%s\' foi formatado com sucesso',
     'sucess_package_removed': 'Pacote: %s removido!',
     'sucess_package_installed': 'Pacote: %s instalado!',
     'sucess_update_cli': 'Upgrade concluído',
-    'sucess_add_controller_in_bindings':
-        'O %s foi adicionado ao binging no path: %s ',
+    'sucess_add_controller_in_bindings': 'O %s foi adicionado ao binging no path: %s ',
     'sucess_navigation_added': '%s navigation adicionada com sucesso.',
     'sucess_file_created': 'Arquivo: %s criado com sucesso no path: %s',
     'sucess_route_created': 'Rota %s criada com sucesso.',
+  };
+  static const ar = {
+    'ask_existing_page': 'الصفحة [%s] موجودة بالفعل, هل تريد استبدالها?',
+    'ask_name_to_project': 'ماهو اسم مشروعك?',
+    'ask_company_domain': 'ماهو النطاق الخاص بشركتك?',
+    'ask_model_name': 'لم نتمكن من اختيار اسم الموديل تلقائيا, ماهو الإسم الذى تريد ان تستخدم?',
+    'ask_package_already_installed': 'المكتبة: %s مثبتة سابقا, هل تريد تحديثها?',
+    'ask_lib_not_empty': 'مجلد lib غير فارغ. هل تريد استبداله? \n تنبيه: لايمكن التراجع عن هذه الخطوة',
+    'ask_ios_lang': 'ماهي اللغة التى تريد استخدامها على ios?',
+    'ask_android_lang': 'ماهي اللغة التى تريد ان تستخدم على android?',
+    'ask_use_null_safe': 'هل تريد استخدام null safe?',
+    'ask_use_linter': 'هل تريد استخدام بعض linter?',
+    'ask_new_page_name': 'ماهو اسم الصفحة الجديد?',
+    'error_failed_to_connect': 'فشل الاتصال مع %s',
+    'error_no_valid_file_or_url': '%s ليس ملفا او رابط صحيحا',
+    'error_unnecessary_parameter': '%s هذا المعامل ليس الزاميا',
+    'error_unnecessary_parameter_plural': '%s معاملات ليست الزامية',
+    'error_nonexistent_directory': '%s مجلد غير موجود.',
+    'error_empty_directory': '%s فارغ',
+    'error_invalid_json': '%s ليس ملف json صحيحا',
+    'error_special_characters_in_key': 'الرموز ليست مقبولة فى المفتاح. \n المفتاح: %s',
+    'error_required_path': 'تحتاج الى ارسال الملف او مسار المجلد',
+    'error_invalid_dart': '%s ليس ملف dart صحيحا',
+    'error_invalid_file_or_directory': '%s ليس ملفات او مجلدا صحيحا',
+    'error_package_not_found': 'المكتبة: %s ليست موجودة فى pub.dev',
+    'error_cli_version_not_found': 'لم يتم العثور على الاصدار الذى قمت بتثبيته.',
+    'error_update_cli': 'هناك خطأ اثناء تحديث get_cli',
+    'error_folder_not_found': 'المجلد %s غير موجود',
+    'error_file_not_found': 'لم يتم العثور على الملف %s',
+    'error_access_denied': 'اذن الوصول غير مرخص %s',
+    'error_unexpected': 'حدث خطأ غير متوقع:',
+    'error_no_package_to_remove': 'ادخل اسم المكتبة التى حذفها',
+    'example': 'مثال:',
+    'warning': 'تنبيه:',
+    'hint_create_controller': 'انشاء Controller',
+    'hint_create_page': 'يستخدم لإنشاء الصفحات',
+    'hint_create_project': 'يستخدم لإنشاء مشروع جديد',
+    'hint_create_provider': 'إنشاء Provider جديد',
+    'hint_create_screen': 'إنشاء شاشة جديدة',
+    'hint_create_view': 'إنشاء view',
+    'hint_generate_locales': 'إنشاء ملف الترجمة من ملفات json',
+    'hint_generate_model': 'إنشاء Class Model من json',
+    'hint_help': 'طلب المساعدة',
+    'hint_init': 'إنشاء هيكل المشروع المختار فى مشروع موجود مسبقا:',
+    'hint_install': 'يستخدم لتثبيت مكتبة فى مشروعك (dependencies):',
+    'hint_remove': 'يستخدم لحذف مكتبة من مشروعك (dependencies):',
+    'hint_sort': 'ترتيب (Format) ملفات dart',
+    'hint_update': 'لتحديث GET_CLI',
+    'hint_version': 'اظهار اصدار CLI الحالي\'',
+    'info_unnecessary_flag': '%s ليس ضروريا',
+    'info_unnecessary_flag_prural': '%s ليس ضروريا',
+    'info_package_not_installed': 'المكتبة: %s ليست مثبتة فى تطبيقك',
+    'info_cli_last_version_already_installed': 'الإصدار الأخير من get_cli مثبت بالفعل',
+    'info_no_file_overwritten': 'لم يتم استبدال اي ملفات',
+    'info_update_available': 'هناك تحديث متوفر! الإصدار الحالي: %s',
+    'info_update_available2': 'الإصدار الجديد: %s يرجى تشغيل:',
+    'options_yes': 'نعم!',
+    'options_no': 'لا',
+    'options_rename': 'اريد اعادة التسمية',
+    'optional_parameters': 'معامل اختياري: %s',
+    'sucess_page_create': '%s تم انشاء الصفحة بنجاح.',
+    'sucess_locale_generate': 'تم انشاء الملفات محليا بنجاح.',
+    'sucess_getx_pattern_generated': 'GetX Pattern structure تم انشاؤه بنجاح.',
+    'sucess_clean_Pattern_generated': 'CLEAN Pattern structure تم انشاؤه بنجاح.',
+    'sucess_file_formatted': ' \'%s\' تم اعادة هيكلته بنجاح',
+    'sucess_package_removed': 'تم حذف المكتبة: %s!',
+    'sucess_package_installed': 'تم تثبيت المكتبة: %s',
+    'sucess_update_cli': 'تم تحديث CLI',
+    'sucess_add_controller_in_bindings': '%s تمت اضافته لل binding فى المسار: %s\'',
+    'sucess_navigation_added': 'تم انشاء navigation: %s بنجاح.',
+    'sucess_file_created': 'تم انشاء الملف: %s بنجاح فى المسار: %s',
+    'sucess_route_created': 'تم انشاء route %s بنجاح.',
   };
 }

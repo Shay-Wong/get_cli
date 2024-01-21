@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import 'package:dcli/dcli.dart';
 import 'package:recase/recase.dart';
 
@@ -42,8 +41,7 @@ class CreatePageCommand extends Command {
   String? get hint => LocaleKeys.hint_create_page.tr;
 
   void checkForAlreadyExists(String? name) {
-    var newFileModel =
-        Structure.model(name, 'page', true, on: onCommand, folderName: name);
+    var newFileModel = Structure.model(name, 'page', true, on: onCommand, folderName: name);
     var pathSplit = Structure.safeSplitPath(newFileModel.path!);
 
     pathSplit.removeLast();
@@ -56,8 +54,7 @@ class CreatePageCommand extends Command {
           LocaleKeys.options_no.tr,
           LocaleKeys.options_rename.tr,
         ],
-        title:
-            Translation(LocaleKeys.ask_existing_page.trArgs([name])).toString(),
+        title: Translation(LocaleKeys.ask_existing_page.trArgs([name])).toString(),
       );
       final result = menu.choose();
       if (result.index == 0) {
@@ -78,6 +75,8 @@ class CreatePageCommand extends Command {
   void _writeFiles(String path, String name, {bool overwrite = false}) {
     var isServer = PubspecUtils.isServerProject;
     var extraFolder = PubspecUtils.extraFolder ?? true;
+    var pageName = PubspecUtils.pageName;
+    var isVersion5 = PubspecUtils.getxVersion == 5;
     var controllerFile = handleFileCreate(
       name,
       'controller',
@@ -94,12 +93,12 @@ class CreatePageCommand extends Command {
     var controllerDir = Structure.pathToDirImport(controllerFile.path);
     var viewFile = handleFileCreate(
       name,
-      'view',
+      pageName.toLowerCase(),
       path,
       extraFolder,
       GetViewSample(
         '',
-        '${name.pascalCase}View',
+        '${name.pascalCase}${pageName.pascalCase}',
         '${name.pascalCase}Controller',
         controllerDir,
         isServer,
@@ -107,6 +106,7 @@ class CreatePageCommand extends Command {
       ),
       'views',
     );
+
     var bindingFile = handleFileCreate(
       name,
       'binding',
@@ -119,6 +119,7 @@ class CreatePageCommand extends Command {
         controllerDir,
         isServer,
         overwrite: overwrite,
+        isVersion5: isVersion5,
       ),
       'bindings',
     );

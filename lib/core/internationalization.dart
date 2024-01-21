@@ -10,13 +10,16 @@ extension TranslationExt on String {
     // Mac return pt-BR;
     localeName = localeName.replaceAll('-', '_');
     // Returns the key if locale is null.
-
     // if (localeName == null) return this;
+
+    // 简体中文统一使用 zh_CN
+    if (localeName == 'zh_Hans_CN') {
+      localeName = 'zh_CN';
+    }
 
     // Checks whether the language code and country code are present, and
     // whether the key is also present.
-    if (translations.containsKey(localeName) &&
-        translations[localeName]!.containsKey(this)) {
+    if (translations.containsKey(localeName) && translations[localeName]!.containsKey(this)) {
       return translations[localeName]![this]!;
 
       // Checks if there is a callback language in the absence of the specific
@@ -28,12 +31,10 @@ extension TranslationExt on String {
       // the key.
     } else {
       final key = 'en';
-      if (translations.containsKey(key) &&
-          translations[key]!.containsKey(this)) {
+      if (translations.containsKey(key) && translations[key]!.containsKey(this)) {
         return translations[key]![this]!;
       }
-      if (translations.containsKey(key.languageCode) &&
-          translations[key.languageCode]!.containsKey(this)) {
+      if (translations.containsKey(key.languageCode) && translations[key.languageCode]!.containsKey(this)) {
         return translations[key.languageCode]![this]!;
       }
       return this;
@@ -54,8 +55,7 @@ extension TranslationExt on String {
     return i > 1 ? plural?.tr : tr;
   }
 
-  String? trArgsPlural(
-      [String? plural, int i = 0, List<String> args = const []]) {
+  String? trArgsPlural([String? plural, int i = 0, List<String> args = const []]) {
     return i > 1 ? plural?.trArgs(args) : trArgs(args);
   }
 }

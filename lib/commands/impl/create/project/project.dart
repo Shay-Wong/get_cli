@@ -23,7 +23,7 @@ class CreateProjectCommand extends Command {
     final menu = Menu([
       'Flutter Project',
       'Get Server',
-    ], title: 'Select which type of project you want to create ?');
+    ], title: LocaleKeys.ask_type_to_project.tr);
     final result = menu.choose();
     String? nameProject = name;
     if (name == '.') {
@@ -51,6 +51,7 @@ class CreateProjectCommand extends Command {
       var org = ask(
         '${LocaleKeys.ask_company_domain.tr} \x1B[33m '
         '${LocaleKeys.example.tr} com.yourcompany \x1B[0m',
+        defaultValue: "com.$nameProject", // 默认为项目名称
       );
 
       final iosLangMenu =

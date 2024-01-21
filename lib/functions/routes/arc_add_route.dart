@@ -17,7 +17,7 @@ void arcAddRoute(String nameRoute) {
       path: 'lib/infrastructure/navigation/routes.dart'));
   var lines = <String>[];
   if (!routesFile.existsSync()) {
-    ArcRouteSample(nameRoute.snakeCase.toUpperCase()).create();
+    ArcRouteSample(nameRoute.camelCase).create();
     lines = routesFile.readAsLinesSync();
   } else {
     var content = formatterDartFile(routesFile.readAsStringSync());
@@ -25,7 +25,7 @@ void arcAddRoute(String nameRoute) {
   }
 
   var line =
-      'static const ${nameRoute.snakeCase.toUpperCase()} = \'/${nameRoute.snakeCase.toLowerCase().replaceAll('_', '-')}\';';
+      'static const ${nameRoute.camelCase} = \'/${nameRoute.snakeCase.toLowerCase().replaceAll('_', '-')}\';';
   if (lines.contains(line)) {
     return;
   }

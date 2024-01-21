@@ -1,5 +1,6 @@
 {
   "ask": {
+    "type_to_project": "选择您要创建的项目类型？",
     "existing_page": "页面 [%s] 已存在，你想覆盖吗？",
     "name_to_project": "项目名称是？",
     "company_domain": "你公司的域名是？",
@@ -10,7 +11,9 @@
     "android_lang": "你想在 Android 端使用什么语言？",
     "use_null_safe": "要使用 null safe 吗？",
     "use_linter": "你想用代码检查器吗？",
-    "new_page_name": "page 的名字是？"
+    "new_page_name": "page 的名字是？",
+    "use_architecture": "您想使用哪种架构？",
+    "use_getx_version": "您要使用哪个 get 版本？"
   },
   "error": {
     "failed_to_connect": "连接到 %s 失败",
@@ -83,6 +86,7 @@
     "add_controller_in_bindings": "%s 已经被添加到在 %s 的binding'",
     "navigation_added": "%s navigation添加成功.",
     "file_created": "文件: %s 创建成功，路径: %s",
-    "route_created": "%s route 创建成功."
+    "route_created": "%s route 创建成功.",
+    "update_yaml": "Yaml get_cli %s 更新完成"
   }
 }
