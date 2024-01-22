@@ -8,7 +8,6 @@ import '../../core/internationalization.dart';
 import '../../core/locales.g.dart';
 import '../../extensions.dart';
 import '../../samples/impl/get_route.dart';
-import '../create/create_single_file.dart';
 import '../find_file/find_file_by_name.dart';
 import 'get_app_pages.dart';
 import 'get_support_children.dart';

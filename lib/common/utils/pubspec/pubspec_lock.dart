@@ -11,6 +11,7 @@ import '../logger/log_utils.dart';
 class PubspecLock {
   static Future<String?> getVersionCli({bool disableLog = false}) async {
     try {
+      // TODO: 本地打包获取版本号
       var scriptFile = Platform.script.toFilePath();
       var pathToPubLock = join(dirname(scriptFile), '../pubspec.lock');
       final file = File(pathToPubLock);

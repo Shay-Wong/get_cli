@@ -7,9 +7,7 @@ import '../impl/args_mixin.dart';
 
 abstract class Command with ArgsMixin {
   Command() {
-    while (
-        ((args.contains(commandName) || args.contains('$commandName:$name'))) &&
-            args.isNotEmpty) {
+    while (((args.contains(commandName) || args.contains('$commandName:$name'))) && args.isNotEmpty) {
       args.removeAt(0);
     }
     if (args.isNotEmpty && args.first == name) {
@@ -32,8 +30,8 @@ abstract class Command with ArgsMixin {
 
   /// validate command line arguments
   bool validate() {
-    if (GetCli.arguments.contains(commandName) ||
-        GetCli.arguments.contains('$commandName:$name')) {
+    // ???: 为什么会报[--version] 是多余的
+    if (GetCli.arguments.contains(commandName) || GetCli.arguments.contains('$commandName:$name')) {
       var flagsNotAceppts = flags;
       flagsNotAceppts.removeWhere((element) => acceptedFlags.contains(element));
       if (flagsNotAceppts.isNotEmpty) {
