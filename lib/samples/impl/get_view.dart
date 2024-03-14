@@ -8,20 +8,22 @@ class GetViewSample extends Sample {
   final String _controller;
   final bool _isServer;
 
-  GetViewSample(String path, this._viewName, this._controller,
-      this._controllerDir, this._isServer,
-      {bool overwrite = false})
-      : super(path, overwrite: overwrite);
+  GetViewSample(
+    super.path,
+    this._viewName,
+    this._controller,
+    this._controllerDir,
+    this._isServer, {
+    super.overwrite,
+  });
 
-  String get import => _controllerDir.isNotEmpty
-      ? '''import 'package:${PubspecUtils.projectName}/$_controllerDir';'''
-      : '';
+  String get import =>
+      _controllerDir.isNotEmpty ? '''import 'package:${PubspecUtils.projectName}/$_controllerDir';''' : '';
 
-  String get _controllerName =>
-      _controller.isNotEmpty ? 'GetView<$_controller>' : 'GetView';
+  String get _controllerName => _controller.isNotEmpty ? 'GetView<$_controller>' : 'GetView';
 
   String get _flutterView => '''import 'package:flutter/material.dart';
-import 'package:get/get.dart'; 
+import 'package:get/get.dart';
 $import
 
 class $_viewName extends $_controllerName {
@@ -35,7 +37,7 @@ class $_viewName extends $_controllerName {
       ),
       body:const Center(
         child: Text(
-          '$_viewName is working', 
+          '$_viewName is working',
           style: TextStyle(fontSize:20),
         ),
       ),
@@ -44,8 +46,7 @@ class $_viewName extends $_controllerName {
 }
   ''';
 
-  String get _serverView =>
-      '''import 'package:get_server/get_server.dart'; $import
+  String get _serverView => '''import 'package:get_server/get_server.dart'; $import
 
 class $_viewName extends $_controllerName {
   @override

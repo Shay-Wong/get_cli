@@ -6,9 +6,12 @@ import '../interface/sample_interface.dart';
 class ControllerSample extends Sample {
   final String _fileName;
   final bool _isServer;
-  ControllerSample(String path, this._fileName, this._isServer,
-      {bool overwrite = false})
-      : super(path, overwrite: overwrite);
+  ControllerSample(
+    super.path,
+    this._fileName,
+    this._isServer, {
+    super.overwrite,
+  });
 
   @override
   String get content => _isServer ? serverController : flutterController;
@@ -17,7 +20,7 @@ class ControllerSample extends Sample {
 
 class ${_fileName.pascalCase}Controller extends GetxController {
   //TODO: Implement ${_fileName.pascalCase}Controller
-  
+
 
   @override
   void onInit() {
@@ -38,7 +41,7 @@ class ${_fileName.pascalCase}Controller extends GetxController {
 
 class ${_fileName.pascalCase}Controller extends GetxController {
   //TODO: Implement ${_fileName.pascalCase}Controller
-  
+
   final count = 0.obs;
   @override
   void onInit() {

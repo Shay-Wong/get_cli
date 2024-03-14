@@ -54,6 +54,7 @@ class ErrorCommand extends Command {
   @override
   Future<void> execute() async {
     LogService.error(error);
+    // TODO: 本地化
     LogService.info('run `get help` to help', false, false);
   }
 

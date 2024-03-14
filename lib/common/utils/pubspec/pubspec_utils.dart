@@ -68,7 +68,6 @@ class PubspecUtils {
   );
 
   static final _mapName = _PubValue<String>(() => pubSpec.name?.trim() ?? '');
-
   /// separtor
   static final _mapSep = _PubValue<String>(() {
     var yaml = pubSpec.unParsedYaml!;
@@ -96,13 +95,29 @@ class PubspecUtils {
   );
 
   static final _pubspecFile = File('pubspec.yaml');
+  static final _translationClassName = _PubValue<String?>(
+    () {
+      try {
+        var yaml = pubSpec.unParsedYaml!;
+        if (yaml.containsKey('get_cli')) {
+          if ((yaml['get_cli'] as Map).containsKey('intl')) {
+            if (yaml['get_cli']['intl'] != null) {
+              if ((yaml['get_cli']['intl'] as Map).containsKey('class_name')) {
+                return (yaml['get_cli']['intl']['class_name'] as String);
+              }
+            }
+          }
+        }
+      } on Exception catch (_) {}
+      return null;
+    },
+  );
 
   static bool? get extraFolder => _extraFolder.value;
   static String get getPackageImport =>
       !isServerProject ? "import 'package:get/get.dart';" : "import 'package:get_server/get_server.dart';";
 
   static int get getxVersion => _getxVersion.value ?? 4;
-
   /// make sure it is a get_server project
   static bool get isServerProject {
     return containsPackage('get_server');
@@ -115,6 +130,7 @@ class PubspecUtils {
   static String? get projectName => _mapName.value;
   static PubSpec get pubSpec => PubSpec.fromYamlString(_pubspecFile.readAsStringSync());
   static String? get separatorFileType => _mapSep.value;
+  static String? get translationClassName => _translationClassName.value;
 
   static Future<bool> addDependencies(String package,
       {String? version, bool isDev = false, bool runPubGet = true, bool isPrerelease = false}) async {

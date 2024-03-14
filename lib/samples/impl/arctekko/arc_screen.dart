@@ -6,9 +6,12 @@ import '../../interface/sample_interface.dart';
 class ArcScreenSample extends Sample {
   late String fileName;
   bool isExample;
-  ArcScreenSample(String path, String fileName,
-      {bool overwrite = false, this.isExample = false})
-      : super(path, overwrite: overwrite);
+  ArcScreenSample(
+    super.path,
+    String fileName, {
+    super.overwrite,
+    this.isExample = false,
+  });
 
   @override
   String get content => !isExample
@@ -28,7 +31,7 @@ class ${fileName.pascalCase}Screen extends GetView<${fileName.pascalCase}Control
       ),
       body:const Center(
         child: Text(
-          '${fileName.pascalCase}Screen  is working', 
+          '${fileName.pascalCase}Screen  is working',
           style: TextStyle(fontSize:20),
         ),
       ),
