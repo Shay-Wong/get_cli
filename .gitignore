@@ -31,5 +31,7 @@ doc/api/
 bin/.get_cli.yaml
 cristiano_teste/*
 bin/*.exe
-.fvm
 example
+
+# FVM Version Cache
+.fvm/
