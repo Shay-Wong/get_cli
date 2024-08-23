@@ -75,8 +75,8 @@ class CreatePageCommand extends Command {
   void _writeFiles(String path, String name, {bool overwrite = false}) {
     var isServer = PubspecUtils.isServerProject;
     var extraFolder = PubspecUtils.extraFolder ?? true;
-    var pageName = PubspecUtils.pageName;
-    var isVersion5 = PubspecUtils.getxVersion == 5;
+    var pageName = PubspecUtilsExt.pageName;
+    var isVersion5 = PubspecUtilsExt.getxVersion == 5;
     var controllerFile = handleFileCreate(
       name,
       'controller',

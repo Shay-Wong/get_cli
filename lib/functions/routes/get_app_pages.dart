@@ -85,7 +85,7 @@ void addAppPage(String name, String bindingDir, String viewDir) {
   // var nameSnakeCase = name.snakeCase;
   var nameCameCase = name.camelCase;
   var namePascalCase = name.pascalCase;
-  var pageName = PubspecUtils.pageName;
+  var pageName = PubspecUtilsExt.pageName;
   var line = '''${_getTabs(tabEspaces)}GetPage(
 ${_getTabs(tabEspaces + 1)}name: $routesOrPath.$nameCameCase,
 ${_getTabs(tabEspaces + 1)}page:()=> const $namePascalCase${pageName.pascalCase}(),

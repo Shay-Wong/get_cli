@@ -83,7 +83,7 @@ class GenerateLocalesCommand extends Command {
 
     var newFileModel = Structure.model('locales', 'generate_locales', false, on: onCommand);
 
-    var className = PubspecUtils.translationClassName;
+    var className = PubspecUtilsExt.translationClassName;
 
     GenerateLocalesSample(
       parsedKeys,

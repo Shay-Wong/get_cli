@@ -18,7 +18,7 @@ class UpdateCommand extends Command {
   String? get hint => Translation(LocaleKeys.hint_update).tr;
 
   @override
-  List<String> get alias => ['upgrade'];
+  List<String> get alias => ['upgrade', '-up'];
 
   @override
   bool validate() {

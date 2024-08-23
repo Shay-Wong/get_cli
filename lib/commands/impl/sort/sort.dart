@@ -77,4 +77,7 @@ class SortCommand extends Command {
       throw CliException(LocaleKeys.error_invalid_dart.trArgs([path]));
     }
   }
+
+  @override
+  List<String> get alias => ['-s'];
 }

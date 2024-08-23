@@ -20,7 +20,7 @@ class InitCommand extends Command {
     ], title: LocaleKeys.ask_use_getx_version.tr);
     final getxVersionResult = getxVersionMenu.choose();
 
-    PubspecUtils.updateGetCliYaml('version', getxVersionResult.index == 0 ? 4 : 5);
+    PubspecUtilsExt.updateGetCliYaml('version', getxVersionResult.index == 0 ? 4 : 5);
 
     final menu = Menu([
       'GetX Pattern (by Kauê)',
@@ -49,4 +49,7 @@ class InitCommand extends Command {
 
   @override
   int get maxParameters => 0;
+
+  @override
+  List<String> get alias => ['-n'];
 }

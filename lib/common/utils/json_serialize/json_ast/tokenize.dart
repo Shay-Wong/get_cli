@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:meta/meta.dart';
 
 import './error.dart';
@@ -56,7 +57,7 @@ enum _NumberState {
   POINT,
   DIGIT_FRACTION,
   EXP,
-  EXP_DIGIT_OR_SIGN
+  EXP_DIGIT_OR_SIGN,
 }
 
 bool _compareDynamicList(List? l, List? other) {
@@ -108,7 +109,7 @@ class ValueNode extends Node {
   }) : super(type, loc);
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is ValueNode &&
       type == other.type &&
       loc == other.loc &&
@@ -147,8 +148,7 @@ class Token {
 class ObjectNode extends Node {
   final List<PropertyNode> children;
 
-  ObjectNode(
-      [
+  ObjectNode([
     super.type = 'Object',
     super.loc,
     List<PropertyNode>? children,
@@ -167,18 +167,21 @@ class ObjectNode extends Node {
   }
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is ObjectNode &&
       type == other.type &&
       loc == other.loc &&
       _compareDynamicList(children, other.children);
 
+  @override
+  int get hashCode => type.hashCode ^ loc.hashCode ^ children.hashCode;
 }
 
 class ArrayNode extends Node {
   final List<Node> children;
 
-  ArrayNode([super.type = 'Array', super.loc, List<Node>? children]) : children = children ?? <Node>[];
+  ArrayNode([super.type = 'Array', super.loc, List<Node>? children])
+      : children = children ?? <Node>[];
 
   ArrayNode copyWith({
     String? type,
@@ -193,12 +196,14 @@ class ArrayNode extends Node {
   }
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is ArrayNode &&
       type == other.type &&
       loc == other.loc &&
       _compareDynamicList(children, other.children);
 
+  @override
+  int get hashCode => type.hashCode ^ loc.hashCode ^ children.hashCode;
 }
 
 class PropertyNode extends Node {
@@ -218,7 +223,7 @@ class PropertyNode extends Node {
         super(type, loc);
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is PropertyNode &&
       type == other.type &&
       index == other.index &&
@@ -226,6 +231,15 @@ class PropertyNode extends Node {
       key == other.key &&
       value == other.value &&
       _compareDynamicList(children, other.children);
+
+  @override
+  int get hashCode =>
+      type.hashCode ^
+      index.hashCode ^
+      loc.hashCode ^
+      key.hashCode ^
+      value.hashCode ^
+      children.hashCode;
 
   PropertyNode copyWith({
     List<Node>? children,
@@ -244,7 +258,6 @@ class PropertyNode extends Node {
       loc: loc ?? this.loc,
     );
   }
-
 }
 
 class LiteralNode extends Node {
@@ -259,12 +272,16 @@ class LiteralNode extends Node {
   }) : super(type, loc);
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is LiteralNode &&
       type == other.type &&
       loc == other.loc &&
       value == other.value &&
       raw == other.raw;
+
+  @override
+  int get hashCode =>
+      type.hashCode ^ loc.hashCode ^ value.hashCode ^ raw.hashCode;
 
   LiteralNode copyWith({
     dynamic value,
@@ -279,7 +296,6 @@ class LiteralNode extends Node {
       loc: loc ?? this.loc,
     );
   }
-
 }
 
 @immutable
@@ -290,9 +306,11 @@ class ValueIndex<T> {
   ValueIndex(this.value, this.index);
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is ValueIndex<T> && value == other.value && index == other.index;
 
+  @override
+  int get hashCode => value.hashCode ^ index.hashCode;
 }
 
 // HELPERS

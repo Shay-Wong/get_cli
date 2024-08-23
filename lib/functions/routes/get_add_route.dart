@@ -15,12 +15,12 @@ import 'get_support_children.dart';
 /// This command will create the route to the new page
 void addRoute(String nameRoute, String bindingDir, String viewDir) {
   var routesFile = findFileByName('app_routes.dart');
-  var content = '';
+  // var content = '';
 
   if (routesFile.path.isEmpty) {
     RouteSample().create();
     routesFile = File(RouteSample().path);
-    content = routesFile.readAsStringSync();
+    // content = routesFile.readAsStringSync();
   }
   var pathSplit = viewDir.split('/');
 

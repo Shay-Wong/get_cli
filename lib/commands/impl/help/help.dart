@@ -40,4 +40,7 @@ $commandsHelp
 
   @override
   int get maxParameters => 0;
+
+  @override
+  List<String> get alias => ['-h'];
 }
