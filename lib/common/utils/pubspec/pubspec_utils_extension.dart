@@ -5,56 +5,103 @@ class PubspecUtilsExt {
   static final _pageName = _PubValue<String?>(
     () {
       try {
-        var yaml = pubspecJson;
-        if (yaml.containsKey('get_cli')) {
-          if ((yaml['get_cli'] as Map).containsKey('page_name')) {
-            return (yaml['get_cli']['page_name'] as String);
-          }
+        if (_getCliMap.containsKey('page_name')) {
+          return (_getCliMap['page_name'] as String);
         }
       } on Exception catch (_) {}
       return null;
     },
   );
-  static final _translationClassName = _PubValue<String?>(() {
-    try {
-      var yaml = pubspecJson;
-      if (yaml.containsKey('get_cli')) {
-        if ((yaml['get_cli'] as Map).containsKey('intl')) {
-          if (yaml['get_cli']['intl'] != null) {
-            if ((yaml['get_cli']['intl'] as Map).containsKey('class_name')) {
-              return (yaml['get_cli']['intl']['class_name'] as String);
-            }
-          }
+
+  static final _localesClassName = _PubValue<String?>(
+    () {
+      try {
+        if (_getLocales.containsKey('class_name')) {
+          return (_getLocales['class_name'] as String);
         }
-      }
-    } on Exception catch (_) {}
-    return null;
-  });
+      } on Exception catch (_) {}
+      return null;
+    },
+  );
+  static final _localesFileName = _PubValue<String?>(
+    () {
+      try {
+        if (_getLocales.containsKey('file_name')) {
+          return (_getLocales['file_name'] as String);
+        }
+      } on Exception catch (_) {}
+      return null;
+    },
+  );
+
+  static final _localesOutput = _PubValue<String?>(
+    () {
+      try {
+        if (_getLocales.containsKey('output')) {
+          return (_getLocales['output'] as String);
+        }
+      } on Exception catch (_) {}
+      return null;
+    },
+  );
+  static final _localesInput = _PubValue<String?>(
+    () {
+      try {
+        if (_getLocales.containsKey('input')) {
+          return (_getLocales['input'] as String);
+        }
+      } on Exception catch (_) {}
+      return null;
+    },
+  );
 
   static final _getxVersion = _PubValue<int?>(
     () {
       try {
-        var yaml = pubspecJson;
-        if (yaml.containsKey('get_cli')) {
-          if ((yaml['get_cli'] as Map).containsKey('version')) {
-            return (yaml['get_cli']['version'] as int);
-          }
+        if (_getCliMap.containsKey('version')) {
+          return (_getCliMap['version'] as int);
         }
       } on Exception catch (_) {}
       return null;
     },
   );
 
+  static get getCliJson => PubspecUtils.getCliJson;
+
   /// 配置的 Getx Version
   static int get getxVersion => _getxVersion.value ?? 4;
 
+  /// 配置的本地化类名 localesClassName
+  static String? get localesClassName => _localesClassName.value;
+
+  /// 配置的本地化文件 localesFileName
+  static String? get localesFileName => _localesFileName.value;
+
+  /// 配置的本地化输出路径
+  static String? get localesOutput => _localesOutput.value;
+
+  /// 配置的本地化输入路径
+  static String? get localesInput => _localesInput.value;
+
   /// 配置的 pageName
   static String get pageName => _pageName.value ?? 'page';
-
   static get pubspecJson => PubspecUtils.pubspecJson;
 
-  /// 配置的 translationClassName
-  static String? get translationClassName => _translationClassName.value;
+  static Map get _getCliMap {
+    try {
+      if (pubspecJson != null && pubspecJson.containsKey('get_cli')) {
+        return (pubspecJson['get_cli'] as Map);
+      }
+      if (getCliJson != null) {
+        return getCliJson as Map;
+      }
+    } on Exception catch (_) {}
+    return {};
+  }
+
+  static Map get _getLocales => _getCliMap.containsKey('locales')
+      ? _getCliMap['locales'] as Map? ?? {}
+      : {};
 
   static bool updateGetCliYaml(
     String key,

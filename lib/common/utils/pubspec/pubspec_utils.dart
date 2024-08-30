@@ -17,12 +17,17 @@ part 'pubspec_utils_extension.dart';
 // ignore: avoid_classes_with_only_static_members
 class PubspecUtils {
   static final _pubspecFile = File('pubspec.yaml');
+  static final _getCliFile = File('.get_cli.yaml');
 
   static Pubspec get pubSpec => Pubspec.parse(pubspecString);
+  // NOTE: 暂时没用到
+  static Pubspec get getCli => Pubspec.parse(getCliString);
 
   static String get pubspecString => _pubspecFile.readAsStringSync();
+  static String get getCliString => _getCliFile.readAsStringSync();
 
   static get pubspecJson => loadYaml(pubspecString);
+  static get getCliJson => loadYaml(getCliString);
 
   /// separtor
   static final _mapSep = _PubValue<String>(() {
@@ -32,6 +37,11 @@ class PubspecUtils {
       if ((yaml['get_cli'] as Map).containsKey('separator')) {
         return (yaml['get_cli']['separator'] as String?) ?? '';
       }
+    }
+
+    yaml = getCliJson;
+    if (yaml != null && yaml.containsKey('separator')) {
+      return yaml['separator'] as String? ?? '';
     }
 
     return '';
@@ -51,6 +61,11 @@ class PubspecUtils {
           if ((yaml['get_cli'] as Map).containsKey('sub_folder')) {
             return (yaml['get_cli']['sub_folder'] as bool?);
           }
+        }
+
+        yaml = getCliJson;
+        if (yaml != null && yaml.containsKey('sub_folder')) {
+          return yaml['sub_folder'] as bool?;
         }
       } on Exception catch (_) {}
       // retorno nulo está sendo tratado
